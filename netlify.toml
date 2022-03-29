@@ -4,9 +4,4 @@
 
 [build]
   publish = "jzzx/.vitepress/dist"
-  command = "npx pnpm i --store=node_modules/.pnpm-store && npx pnpm run jzzx-build"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  command = "npx pnpm i --store=node_modules/.pnpm-store && npm run jzzx-build"
