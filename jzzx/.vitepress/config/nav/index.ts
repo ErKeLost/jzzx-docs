@@ -21,7 +21,7 @@ export const nav = [
   },
   {
     text: 'Playground',
-    link: 'https://erkelost.gitee.io/jzzx'
+    link: 'https://jzzx-playground.netlify.app'
   },
   {
     text: 'Vue规范',
