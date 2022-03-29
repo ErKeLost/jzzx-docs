@@ -4,7 +4,7 @@
 
 [build]
   publish = "jzzx/.vitepress/dist"
-  command = "npx pnpm i --store=node_modules/.pnpm-store && pnpm run jzzx-build"
+  command = "pnpm run jzzx-build"
 
 [[redirects]]
   from = "/*"
