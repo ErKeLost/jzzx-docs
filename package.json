@@ -32,7 +32,7 @@
     "type": "tsc --noEmit",
     "test": "yarn lint && yarn type",
     "dev": "vitepress dev jzzx",
-    "jzzx-build": "vitepress build jzzx",
+    "build": "vitepress build jzzx",
     "serve": "yarn jzzx-build && vitepress serve jzzx"
   },
   "dependencies": {
