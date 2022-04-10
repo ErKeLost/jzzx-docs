@@ -30,7 +30,7 @@ export const nav = [
       {
         text: 'Progress Framework',
         items: [
-          { text: 'Vue2', link: '/vue/vue2/index' },
+          // { text: 'Vue2', link: '/vue/vue2/index' },
           { text: 'Vue3/core', link: '/vue/core/index' },
           { text: 'Vuex@next详解', link: '/vue/vuex/index' },
           { text: 'VueRouter@next详解', link: '/vue/vue-router/index' },
