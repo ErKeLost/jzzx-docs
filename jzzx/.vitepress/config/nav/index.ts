@@ -40,9 +40,9 @@ export const nav = [
       {
         text: 'Template',
         items: [
-          { text: 'Vue2', link: '/vue/vue2/vue2' },
-          { text: '移动端Vue2 ', link: '/vue/vue2/vue2-mobile' },
-          { text: 'Vue3 + Ts', link: '/vue/core/vue3-mobile' },
+          // { text: 'Vue2', link: '/vue/vue2/vue2' },
+          // { text: '移动端Vue2 ', link: '/vue/vue2/vue2-mobile' },
+          { text: 'Vue3 + Ts', link: '/vue/core/vue3' },
           { text: '移动端Vue3 + Ts', link: '/vue/core/vue3-mobile' }
         ]
       },
@@ -102,13 +102,13 @@ export const nav = [
     ]
   },
   {
-    text: '组件库',
+    text: 'Pro 组件',
     activeMatch: `^/community/`,
     items: [
       {
-        text: 'jzzx-ui',
+        text: 'jzzx-components',
         items: [
-          { text: 'jzzx-ui', link: '/jzzx-ui/index' }
+          { text: 'jzzx-layout-pro', link: '/jzzx-components/layout-pro/index' }
           // {
           //   text: 'Contribution Guide',
           //   link: '/community/contribution-guide'
