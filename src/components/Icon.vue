@@ -4,5 +4,5 @@
   </p>
 </template>
 <script lang="ts" setup>
-import adny from '../../assets/images/adny.jpg'
+import adny from '../../assets/images/adny.png'
 </script>
