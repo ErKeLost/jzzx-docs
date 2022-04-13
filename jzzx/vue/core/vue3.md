@@ -85,7 +85,7 @@ import Adny from '@/components/Icon.vue'
 - [Vitest](https://github.com/vitest-dev/vitest) - 基于 Vite 的单元测试框架
 - [pnpm](https://pnpm.js.org/) - 快, 节省磁盘空间的包管理器
 - [Netlify](https://www.netlify.com/) - 零配置的部署
-- [VS Code 扩展](./.vscode/extensions.json)
+- [VS Code 扩展]()
   - [Vite](https://marketplace.visualstudio.com/items?itemName=antfu.vite) - 自动启动 Vite 服务器
   - [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) - Vue 3 `<script setup>` IDE 支持
   - [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify) - 图标内联显示和自动补全
