@@ -1,7 +1,7 @@
-<p align='center'>
-  <img src='https://cdn.vuetifyjs.com/docs/images/logos/vuetify-logo-v3-light.svg' width='300'/>
-</p>
-
+<script setup>
+import Adny from '@/components/Icon.vue'
+</script>
+<Adny />
 <p align='center'>
 快速地<sup><em>@erkelost/tempalte</em></sup> 创建 Web 应用
 <br> 
@@ -55,8 +55,8 @@
 
 ### UI 框架
 
-- [UnoCSS](https://github.com/antfu/unocss) - 高性能且极具灵活性的即时原子化 CSS 引擎 目前可能 回有一些bug 会引发问题
-- [WindCss]() - 原子化Tailwind Css 引擎 我们选这个
+- [UnoCSS](https://github.com/antfu/unocss) - 高性能且极具灵活性的即时原子化 CSS 引擎 目前可能 回有一些 bug 会引发问题
+- [WindCss]() - 原子化 Tailwind Css 引擎 我们选这个
 
 ### Icons
 
