@@ -28,7 +28,7 @@
 
 > 安装 推荐使用 pnpm
 
-```bash
+```ts
 npm install pnpm -g
 pnpm add @erkelost/layout
 ```

@@ -63,7 +63,7 @@ import Adny from '@/components/Icon.vue'
 - [Iconify](https://iconify.design) - 使用任意的图标集，浏览：[🔍Icônes](https://icones.netlify.app/)
 - [UnoCSS 的纯 CSS 图标方案](https://github.com/antfu/unocss/tree/main/packages/preset-icons)
 
-### 插件
+### 插件 继承大部分vite插件及其使用方式
 
 - [Vue Router](https://github.com/vuejs/vue-router)
   - [`vite-plugin-pages`](https://github.com/hannoeru/vite-plugin-pages) - 以文件系统为基础的路由
@@ -98,7 +98,7 @@ import Adny from '@/components/Icon.vue'
 
 ### GitHub 模板
 
-[使用这个模板创建仓库](https://github.com/antfu/vitesse/generate).
+[使用这个模板创建仓库](https://github.com/ErKeLost/vite-vue3-template).
 
 ### 克隆到本地
 

@@ -108,7 +108,9 @@ export const nav = [
       {
         text: 'jzzx-components',
         items: [
-          { text: 'jzzx-layout-pro', link: '/jzzx-components/layout-pro/index' }
+          { text: 'jzzx-layout-pro', link: '/jzzx-components/layout-pro/index' },
+          { text: 'jzzx-colorPicker-pro', link: '/jzzx-components/layout-pro/index' },
+          { text: 'jzzx-statistic-pro', link: '/jzzx-components/layout-pro/index' }
           // {
           //   text: 'Contribution Guide',
           //   link: '/community/contribution-guide'
