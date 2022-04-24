@@ -4,26 +4,45 @@
 
 ```ts
 // Boolean
-let isFalg: boolean = false;
+let isFalg: boolean = false
 // 转义之后
-var flag = false;
+var flag = false
 
 // Number
-let counter: number = 1000;
+let counter: number = 1000
 // 转义之后
-var counter = 1000;
+var counter = 1000
 
 // String
-let name: string = "erkelost";
+let name: string = 'erkelost'
 // 转义
-var name = "erkelost";
+var name = 'erkelost'
 
 // Array
-let list: number[] = [1, 2, 3];
+let list: number[] = [1, 2, 3]
 // ES5：var list = [1,2,3];
 
-let list: Array<number> = [1, 2, 3]; // Array<number>泛型语法 Jsx不支持 会有冲突
+let list: Array<number> = [1, 2, 3] // Array<number>泛型语法 Jsx不支持 会有冲突
 // ES5：var list = [1,2,3];
+```
+
+### 定义数组的其他类型
+
+```ts
+const name: string[] = []
+
+const age: Array<string> = []
+
+let pop: (string | number)[] = []
+// 表示定义了一个名称叫做arr的数组,
+// 这个数组中将来既可以存储数值类型的数据, 也可以存储字符串类型的数据
+pop = [1, 'b', 2, 'c']
+
+interface arrType {
+  name: string
+  age: number
+}
+const adny: arrType[] = [{ name: adny, age: 99999 }]
 ```
 
 ### 枚举类型
@@ -42,25 +61,25 @@ enum Direction {
   WEST,
 }
 // 转义
-var Direction;
-(function (Direction) {
-  Direction[(Direction["NORTH"] = 3)] = "NORTH";
-  Direction[(Direction["SOUTH"] = 4)] = "SOUTH";
-  Direction[(Direction["EAST"] = 5)] = "EAST";
-  Direction[(Direction["WEST"] = 6)] = "WEST";
-})(Direction || (Direction = {}));
+var Direction
+;(function (Direction) {
+  Direction[(Direction['NORTH'] = 3)] = 'NORTH'
+  Direction[(Direction['SOUTH'] = 4)] = 'SOUTH'
+  Direction[(Direction['EAST'] = 5)] = 'EAST'
+  Direction[(Direction['WEST'] = 6)] = 'WEST'
+})(Direction || (Direction = {}))
 
-let dir: Direction = Direction.NORTH;
+let dir: Direction = Direction.NORTH
 export enum EnumThemeLayoutMode {
-  "vertical" = "左侧菜单模式",
-  "horizontal" = "顶部菜单模式",
-  "vertical-mix" = "左侧菜单混合模式",
-  "horizontal-mix" = "顶部菜单混合模式",
+  'vertical' = '左侧菜单模式',
+  'horizontal' = '顶部菜单模式',
+  'vertical-mix' = '左侧菜单混合模式',
+  'horizontal-mix' = '顶部菜单混合模式',
 }
 
 export enum EnumThemeTabMode {
-  "chrome" = "谷歌风格",
-  "button" = "按钮风格",
+  'chrome' = '谷歌风格',
+  'button' = '按钮风格',
 }
 ```
 
@@ -71,9 +90,9 @@ export enum EnumThemeTabMode {
 #### 在 TypeScript 中，任何类型都可以被归为 any 类型。这让 any 类型成为了类型系统的顶级类型（也被称作全局超级类型）。
 
 ```ts
-let name: any = 666;
-name = "erkelost";
-name = false;
+let name: any = 666
+name = 'erkelost'
+name = false
 ```
 
 ### Unknown 类型
@@ -81,12 +100,12 @@ name = false;
 #### 就像所有类型都可以赋值给 any，所有类型也都可以赋值给 unknown。这使得 unknown 成为 TypeScript 类型系统的另一种顶级类型（另一种是 any） unknown 类型只能被赋值给 any 类型和 unknown 类型本身。 只有能够保存任意类型值的容器才能保存 unknown 类型的值
 
 ```ts
-let name: unknown = 666;
-name = "erkelost";
-name = false;
+let name: unknown = 666
+name = 'erkelost'
+name = false
 //error
-let value3: boolean = name; // Error Type 'unknown' is not assignable to type 'boolean'.
-let value4: number = name; // Error Type 'unknown' is not assignable to type 'number'.
+let value3: boolean = name // Error Type 'unknown' is not assignable to type 'boolean'.
+let value4: number = name // Error Type 'unknown' is not assignable to type 'number'.
 ```
 
 ### 元组 Tuple
@@ -94,8 +113,8 @@ let value4: number = name; // Error Type 'unknown' is not assignable to type 'nu
 #### 数组一般由同种类型的值组成，但有时我们需要在单个变量中存储不同类型的值，这时候我们就可以使用元组。在 JavaScript 中是没有元组的，元组是 TypeScript 中特有的类型
 
 ```ts
-let tupleType: [string, boolean];
-tupleType = ["erkelost", true];
+let tupleType: [string, boolean]
+tupleType = ['erkelost', true]
 ```
 
 ### Void 类型
@@ -105,7 +124,7 @@ tupleType = ["erkelost", true];
 ```ts
 // 声明函数返回值为void
 function warnUser(): void {
-  console.log("This is my warning message");
+  console.log('This is my warning message')
 }
 ```
 
@@ -114,7 +133,7 @@ function warnUser(): void {
 :::
 
 ```ts
-let unusable: void = undefined;
+let unusable: void = undefined
 ```
 
 ### Null 和 Undefined
@@ -122,8 +141,8 @@ let unusable: void = undefined;
 #### 在 ts 中 undefined 和 null 两者有各自的类型 也是 undefined 和 null
 
 ```ts
-let u: undefined = undefined;
-let n: null = null;
+let u: undefined = undefined
+let n: null = null
 ```
 
 ### Never
@@ -131,16 +150,16 @@ let n: null = null;
 #### never 类型表示的是那些永不存在的值的类型。 例如，never 类型是那些总是会抛出异常或根本就不会有返回值的函数表达式或箭头函数表达式的返回值类型。在 TypeScript 中，可以利用 never 类型的特性来实现全面性检查，具体示例如下：
 
 ```ts
-type Foo = string | number;
+type Foo = string | number
 
 function controlFlowAnalysisWithNever(foo: Foo) {
-  if (typeof foo === "string") {
+  if (typeof foo === 'string') {
     // 这里 foo 被收窄为 string 类型
-  } else if (typeof foo === "number") {
+  } else if (typeof foo === 'number') {
     // 这里 foo 被收窄为 number 类型
   } else {
     // foo 在这里是 never
-    const check: never = foo;
+    const check: never = foo
   }
 }
 ```
@@ -155,8 +174,8 @@ function controlFlowAnalysisWithNever(foo: Foo) {
 :::
 
 ```ts
-let someValue: any = "this is a string";
-let strLength: number = (someValue as string).length;
+let someValue: any = 'this is a string'
+let strLength: number = (someValue as string).length
 ```
 
 ### 非空断言 ！
@@ -182,24 +201,196 @@ function processEntity(e?: Entity) {
 
 ```ts
 interface Admin {
-  name: string;
-  privileges: string[];
+  name: string
+  privileges: string[]
 }
 
 interface Employee {
-  name: string;
-  startDate: Date;
+  name: string
+  startDate: Date
 }
 
-type UnknownEmployee = Employee | Admin;
+type UnknownEmployee = Employee | Admin
 
 function printEmployeeInformation(emp: UnknownEmployee) {
-  console.log("Name: " + emp.name);
-  if ("privileges" in emp) {
-    console.log("Privileges: " + emp.privileges);
+  console.log('Name: ' + emp.name)
+  if ('privileges' in emp) {
+    console.log('Privileges: ' + emp.privileges)
   }
-  if ("startDate" in emp) {
-    console.log("Start Date: " + emp.startDate);
+  if ('startDate' in emp) {
+    console.log('Start Date: ' + emp.startDate)
   }
 }
 ```
+
+#### typeof 关键字
+
+```ts
+function padLeft(value: string, padding: string | number) {
+  if (typeof padding === 'number') {
+    return '我是number类型'
+  }
+  if (typeof padding === 'string') {
+    return '我是string类型'
+  }
+}
+```
+
+#### 联合类型
+
+#### 如果我们在一个返回值中 想同时接收两种类型的值
+
+```ts
+// 定义联合类型数组
+const arr: string[] = []
+const arr: (string | number)[] = []
+// 函数类型 联合类型通常与null 和 undefined 一起使用
+const sayHello = (name: string | undefined) => {
+  /* ... */
+}
+sayHello('erkelost')
+sayHello(undefined)
+// 其他用法
+let num: 1 | 2 = 1
+type EventNames = 'click' | 'scroll' | 'mousemove'
+```
+
+:::warning
+这里 name 的类型是 string | undefined 意味着可以将 string 或 undefined 的值传递给 sayHello 函数。
+:::
+
+#### 可辨识联合类型 TypeScript 可辨识联合（Discriminated Unions）类型 包含三个要点 可辨识 联合类型 和 类型守卫
+
+#### 1. 可辨识
+
+```ts
+enum CarTransmission {
+  Automatic = 200,
+  Manual = 300,
+}
+
+interface Motorcycle {
+  vType: 'motorcycle' // discriminant
+  make: number // year
+}
+
+interface Car {
+  vType: 'car' // discriminant
+  transmission: CarTransmission
+}
+
+interface Truck {
+  vType: 'truck' // discriminant
+  capacity: number // in tons
+}
+```
+
+:::warning
+上述代码 我们定义三个接口 每个接口都包含一个 type 属性 这中属性被称为可辨识 属性 其他的属性 只跟不同接口的特性有关
+:::
+
+#### 2.联合类型
+
+#### 基于前面定义的三个接口 我们可以创建一个 Vehicle 联合类型
+
+```ts
+type Vehicle = Motorcycle | Car | Truck
+```
+
+#### 3.类型守卫
+
+```ts
+function evaluatePrice(vehicle: Vehicle) {
+  switch (vehicle.vType) {
+    case 'car':
+      return vehicle.transmission * EVALUATION_FACTOR
+    case 'truck':
+      return vehicle.capacity * EVALUATION_FACTOR
+    case 'motorcycle':
+      return vehicle.make * EVALUATION_FACTOR
+  }
+}
+```
+
+### 类型别名
+
+#### 类型别名用来给一个类型起一个新名字
+
+```ts
+type message = string | number[]
+
+let adny = (message: message) => {}
+```
+
+### 交叉类型
+
+#### 在 ts 中交叉类型是将多个类型合并成一种类型 通过 & 将现有的多种类型叠加到一起成为一种类型
+
+```ts
+type name = { name: string }
+type erkelost = { age: number } & name
+let adny: erkelost = {
+  age: 99,
+  name: 'erklost',
+}
+```
+
+### 函数
+
+#### typescript 对函数有严格的校验 比如返回值类型 参数包含必填和可选参数 函数重载
+
+```ts
+// 基本函数类型
+function createUserId(name: string, id: number): string {
+  return name + id
+}
+
+// 可选参数以及默认参数
+// 可选参数
+function createUserId(name: string, id: number, age?: number): string {
+  return name + id
+}
+
+// 默认参数  注意 可选参数需要放在arguments最后面  我们后面会讲到 泛型
+function createUserId(name: string = 'semlinker', id: number, age?: number): string {
+  return name + id
+}
+
+// 函数重载  函数重载或方法重载是使用相同名称和不同参数数量或类型创建多个方法的一种能力。
+function add(a: number, b: number): number
+function add(a: string, b: string): string
+function add(a: string, b: number): string
+function add(a: number, b: string): string
+function add(a: Combinable, b: Combinable) {
+  // type Combinable = string | number;
+  if (typeof a === 'string' || typeof b === 'string') {
+    return a.toString() + b.toString()
+  }
+  return a + b
+}
+```
+
+### 可选 和 只读 属性 (只读属性用于限制只能在对象刚刚创建的时候修改其值)
+
+```ts
+interface Person {
+  readonly name: string
+  age?: number
+}
+```
+
+### 任意属性
+
+```ts
+interface Person {
+  name: string
+  age?: number
+  [propName: string]: any
+}
+
+const p1 = { name: 'adny' }
+const p2 = { name: 'erkelost', age: 5 }
+const p3 = { name: 'obj', sex: 1 }
+```
+
+### Extend
