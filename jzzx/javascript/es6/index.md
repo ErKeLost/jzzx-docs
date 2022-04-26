@@ -358,6 +358,35 @@ class Person {
 
 ## Map 数据结构
 
+### map 是另外一个新增的数据结构 用于存储映射关系 对象存储只能用字符串 map允许我们使用对象类型来作为key
+```ts
+const map = new Map()
+const obj = {
+  name: 'erkelost'
+}
+map.set(obj, 'erkelost')
 
+// map可以传递一个数组
+const map = new Map([
+  ['name', 'erkelost'],
+  ['age', 18],
+  [obj, 'adny']
+])
+```
+### map 的属性 和 常见得方法
+```ts
+map.size // 获取map的长度
+map.set(key, value) // 向map中添加一个键值对
+map.get(key) // 获取某个键对应的值
+map.has(key) // 判断map中是否有某个键
+map.delete(key) // 删除某个键
+map.clear() // 清空map
+map.keys() // 获取所有的键
+// 遍历
+map.forEach((value, key, map) => {})
+for(const [key, value] of map) {}
+```
+```
+```
 
 ## WeakMap 数据结构
