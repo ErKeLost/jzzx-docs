@@ -1,3 +1,12 @@
+![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/de113c8a88df4ab29b9039b8a6420b37~tplv-k3u1fbpfcp-watermark.image?)
+
+# TypeScript 高级语法 (转义默认 ES5)
+
+
+
+## Class 
+
+
 ## Extend
 
 #### 接口和类型别名都能够被扩展，但语法有所不同。此外，接口和类型别名不是互斥的。接口可以扩展类型别名，而反过来是不行的。

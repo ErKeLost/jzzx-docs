@@ -1,5 +1,7 @@
 ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/de113c8a88df4ab29b9039b8a6420b37~tplv-k3u1fbpfcp-watermark.image?)
 
+
+# TypeScript 基础语法 (转义默认 ES5)
 ## TypeScript 基础类型 (转义默认 ES5)
 
 ```ts
@@ -664,6 +666,4 @@ type NameType = {
 function sayHello(this: NameType) {
   console.log(this.name)
 }
-```
-
 ```
