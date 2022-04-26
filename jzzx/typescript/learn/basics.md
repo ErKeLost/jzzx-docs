@@ -83,11 +83,11 @@ export enum EnumThemeTabMode {
 }
 ```
 
-#### · 默认情况下，NORTH 的初始值为 0，其余的成员会从 1 开始自动增长。换句话说，Direction.SOUTH 的值为 1，Direction.EAST 的值为 2，Direction.WEST 的值为 3
+### · 默认情况下，NORTH 的初始值为 0，其余的成员会从 1 开始自动增长。换句话说，Direction.SOUTH 的值为 1，Direction.EAST 的值为 2，Direction.WEST 的值为 3
 
-### Any 类型
+## Any 类型
 
-#### 在 TypeScript 中，任何类型都可以被归为 any 类型。这让 any 类型成为了类型系统的顶级类型（也被称作全局超级类型）。
+### 在 TypeScript 中，任何类型都可以被归为 any 类型。这让 any 类型成为了类型系统的顶级类型（也被称作全局超级类型）。
 
 ```ts
 let name: any = 666
@@ -95,9 +95,9 @@ name = 'erkelost'
 name = false
 ```
 
-### Unknown 类型
+## Unknown 类型
 
-#### 就像所有类型都可以赋值给 any，所有类型也都可以赋值给 unknown。这使得 unknown 成为 TypeScript 类型系统的另一种顶级类型（另一种是 any） unknown 类型只能被赋值给 any 类型和 unknown 类型本身。 只有能够保存任意类型值的容器才能保存 unknown 类型的值
+### 就像所有类型都可以赋值给 any，所有类型也都可以赋值给 unknown。这使得 unknown 成为 TypeScript 类型系统的另一种顶级类型（另一种是 any） unknown 类型只能被赋值给 any 类型和 unknown 类型本身。 只有能够保存任意类型值的容器才能保存 unknown 类型的值
 
 ```ts
 let name: unknown = 666
@@ -108,18 +108,18 @@ let value3: boolean = name // Error Type 'unknown' is not assignable to type 'bo
 let value4: number = name // Error Type 'unknown' is not assignable to type 'number'.
 ```
 
-### 元组 Tuple
+## 元组 Tuple
 
-#### 数组一般由同种类型的值组成，但有时我们需要在单个变量中存储不同类型的值，这时候我们就可以使用元组。在 JavaScript 中是没有元组的，元组是 TypeScript 中特有的类型
+### 数组一般由同种类型的值组成，但有时我们需要在单个变量中存储不同类型的值，这时候我们就可以使用元组。在 JavaScript 中是没有元组的，元组是 TypeScript 中特有的类型
 
 ```ts
 let tupleType: [string, boolean]
 tupleType = ['erkelost', true]
 ```
 
-### Void 类型
+## Void 类型
 
-#### Void 类型与 Any 类型相反 它表示没有任何类型 当一个函数没有返回值时 我们通常会使用 Void
+### Void 类型与 Any 类型相反 它表示没有任何类型 当一个函数没有返回值时 我们通常会使用 Void
 
 ```ts
 // 声明函数返回值为void
@@ -145,7 +145,7 @@ let u: undefined = undefined
 let n: null = null
 ```
 
-### Never
+## Never
 
 #### never 类型表示的是那些永不存在的值的类型。 例如，never 类型是那些总是会抛出异常或根本就不会有返回值的函数表达式或箭头函数表达式的返回值类型。在 TypeScript 中，可以利用 never 类型的特性来实现全面性检查，具体示例如下：
 
@@ -164,7 +164,7 @@ function controlFlowAnalysisWithNever(foo: Foo) {
 }
 ```
 
-### 断言
+## 断言
 
 #### 你会比 TypeScript 更了解某个值的详细信息。通常这会发生在你清楚地知道一个实体具有比它现有类型更确切的类型。通过类型断言这种方式可以告诉编译器，“相信我，我知道自己在干什么”。类型断言好比其他语言里的类型转换，但是不进行特殊的数据检查和解构
 
@@ -178,7 +178,7 @@ let someValue: any = 'this is a string'
 let strLength: number = (someValue as string).length
 ```
 
-### 非空断言 ！
+## 非空断言 ！
 
 #### 当我们上下文的类型检查器 无法断定类型时 我们可以使用！后缀用于断言操作对象是非 null 或者 undefined 类型 意思就是我们可以从可能是未定义中排除 null 和 undefined
 
@@ -193,11 +193,11 @@ function processEntity(e?: Entity) {
 
 ```
 
-### 类型守卫
+## 类型守卫
 
 #### 类型保护是可执行运行时检查的一种表达式，用于确保该类型在一定的范围内。换句话说，类型保护可以保证一个字符串是一个字符串，尽管它的值也可以是一个数值。类型保护与特性检测并不是完全不同，其主要思想是尝试检测属性、方法或原型，以确定如何处理值。目前主要有四种的方式来实现类型保护：
 
-#### In 关键字
+### In 关键字
 
 ```ts
 interface Admin {
@@ -223,7 +223,7 @@ function printEmployeeInformation(emp: UnknownEmployee) {
 }
 ```
 
-#### typeof 关键字
+### typeof 关键字
 
 ```ts
 function padLeft(value: string, padding: string | number) {
@@ -236,9 +236,9 @@ function padLeft(value: string, padding: string | number) {
 }
 ```
 
-#### 联合类型
+## 联合类型
 
-#### 如果我们在一个返回值中 想同时接收两种类型的值
+### 如果我们在一个返回值中 想同时接收两种类型的值
 
 ```ts
 // 定义联合类型数组
@@ -259,9 +259,9 @@ type EventNames = 'click' | 'scroll' | 'mousemove'
 这里 name 的类型是 string | undefined 意味着可以将 string 或 undefined 的值传递给 sayHello 函数。
 :::
 
-#### 可辨识联合类型 TypeScript 可辨识联合（Discriminated Unions）类型 包含三个要点 可辨识 联合类型 和 类型守卫
+### 可辨识联合类型 TypeScript 可辨识联合（Discriminated Unions）类型 包含三个要点 可辨识 联合类型 和 类型守卫
 
-#### 1. 可辨识
+### 1. 可辨识
 
 ```ts
 enum CarTransmission {
@@ -289,15 +289,15 @@ interface Truck {
 上述代码 我们定义三个接口 每个接口都包含一个 type 属性 这中属性被称为可辨识 属性 其他的属性 只跟不同接口的特性有关
 :::
 
-#### 2.联合类型
+### 2.联合类型
 
-#### 基于前面定义的三个接口 我们可以创建一个 Vehicle 联合类型
+### 基于前面定义的三个接口 我们可以创建一个 Vehicle 联合类型
 
 ```ts
 type Vehicle = Motorcycle | Car | Truck
 ```
 
-#### 3.类型守卫
+### 3.类型守卫
 
 ```ts
 function evaluatePrice(vehicle: Vehicle) {
@@ -312,9 +312,9 @@ function evaluatePrice(vehicle: Vehicle) {
 }
 ```
 
-### 类型别名
+## 类型别名
 
-#### 类型别名用来给一个类型起一个新名字
+### 类型别名用来给一个类型起一个新名字
 
 ```ts
 type message = string | number[]
@@ -322,9 +322,9 @@ type message = string | number[]
 let adny = (message: message) => {}
 ```
 
-### 交叉类型
+## 交叉类型
 
-#### 在 ts 中交叉类型是将多个类型合并成一种类型 通过 & 将现有的多种类型叠加到一起成为一种类型
+### 在 ts 中交叉类型是将多个类型合并成一种类型 通过 & 将现有的多种类型叠加到一起成为一种类型
 
 ```ts
 type name = { name: string }
@@ -335,9 +335,9 @@ let adny: erkelost = {
 }
 ```
 
-### 函数
+## 函数
 
-#### typescript 对函数有严格的校验 比如返回值类型 参数包含必填和可选参数 函数重载
+### typescript 对函数有严格的校验 比如返回值类型 参数包含必填和可选参数 函数重载
 
 ```ts
 // 基本函数类型
@@ -370,7 +370,7 @@ function add(a: Combinable, b: Combinable) {
 }
 ```
 
-### 可选 和 只读 属性 (只读属性用于限制只能在对象刚刚创建的时候修改其值)
+## 可选 和 只读 属性 (只读属性用于限制只能在对象刚刚创建的时候修改其值)
 
 ```ts
 interface Person {
@@ -379,7 +379,7 @@ interface Person {
 }
 ```
 
-### 任意属性
+## 任意属性
 
 ```ts
 interface Person {
@@ -393,10 +393,10 @@ const p2 = { name: 'erkelost', age: 5 }
 const p3 = { name: 'obj', sex: 1 }
 ```
 
-### Extend
+## Extend
 
-#### 接口和类型别名都能够被扩展，但语法有所不同。此外，接口和类型别名不是互斥的。接口可以扩展类型别名，而反过来是不行的。
-#### 继承，一个新的接口或者类，从父类或者接口继承所有的属性和方法，不可以重写属性，但可以重写方法
+### 接口和类型别名都能够被扩展，但语法有所不同。此外，接口和类型别名不是互斥的。接口可以扩展类型别名，而反过来是不行的。
+### 继承，一个新的接口或者类，从父类或者接口继承所有的属性和方法，不可以重写属性，但可以重写方法
 
 ```ts
 // 接口继承接口
@@ -413,9 +413,9 @@ type PartialPointX = { x: number }
 type Point = PartialPointX & { y: number }
 ```
 
-### Implements
+## Implements
 
-#### implements 实现，一个新的类，从父类或者接口实现所有的属性和方法，同时可以重写属性和方法，包含一些新的功能
+### implements 实现，一个新的类，从父类或者接口实现所有的属性和方法，同时可以重写属性和方法，包含一些新的功能
 
 ```ts
 interface Point {
