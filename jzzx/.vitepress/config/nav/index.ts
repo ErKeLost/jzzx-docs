@@ -28,6 +28,10 @@ export const nav = [
         link: 'https://jzzx-playground.netlify.app'
       },
       {
+        text: 'VueUse-Playground',
+        link: 'https://play.vueuse.org/'
+      },
+      {
         text: 'Typescript-Playground',
         link: 'https://www.typescriptlang.org/play'
       }
