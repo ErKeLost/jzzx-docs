@@ -1,31 +1,31 @@
 ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/de113c8a88df4ab29b9039b8a6420b37~tplv-k3u1fbpfcp-watermark.image?)
 
+# TypeScript 基础语法
 
-# TypeScript 基础语法 (转义默认 ES5)
-## TypeScript 基础类型 (转义默认 ES5)
+## 基础类型 (转义默认 ES5)
 
 ```ts
 // Boolean
-let isFalg: boolean = false
+let isFlag: boolean = false;
 // 转义之后
-var flag = false
+var flag = false;
 
 // Number
-let counter: number = 1000
+let counter: number = 1000;
 // 转义之后
 
-var counter = 1000
+var counter = 1000;
 
 // String
-let name: string = 'erkelost'
+let name: string = "erkelost";
 // 转义
-var name = 'erkelost'
+var name = "erkelost";
 
 // Array
-let list: number[] = [1, 2, 3]
+let list: number[] = [1, 2, 3];
 // ES5：var list = [1,2,3];
 
-let list: Array<number> = [1, 2, 3] // Array<number>泛型语法 Jsx不支持 会有冲突
+let list: Array<number> = [1, 2, 3]; // Array<number>泛型语法 Jsx不支持 会有冲突
 // ES5：var list = [1,2,3];
 ```
 
@@ -35,12 +35,12 @@ let list: Array<number> = [1, 2, 3] // Array<number>泛型语法 Jsx不支持 �
 
 ```ts
 const userInfo: object = {
-  name: 'adny',
-  age: '18',
-}
+  name: "adny",
+  age: "18",
+};
 ```
 
-:::error
+:::tip
 但是我们从 userInfo 中不能获取数据 也不能设置数据 因为 object 里面 根本就没有 age 和 name 属性
 Object 是 Object 对象实例
 :::
@@ -48,23 +48,23 @@ Object 是 Object 对象实例
 ## 定义数组的其他类型
 
 ```ts
-const name: string[] = []
+const name: string[] = [];
 
-const age: Array<string> = []
+const age: Array<string> = [];
 
-let pop: (string | number)[] = []
+let pop: (string | number)[] = [];
 // 表示定义了一个名称叫做arr的数组,
 // 这个数组中将来既可以存储数值类型的数据, 也可以存储字符串类型的数据
-pop = [1, 'b', 2, 'c']
+pop = [1, "b", 2, "c"];
 
 interface arrType {
-  name: string
-  age: number
+  name: string;
+  age: number;
 }
-const adny: arrType[] = [{ name: adny, age: 99999 }]
+const adny: arrType[] = [{ name: adny, age: 99999 }];
 ```
 
-### 枚举类型
+## 枚举类型
 
 :::warning
 使用枚举我们可以定义一些带有命名的变量 我们可以清晰的表达我们对一组不同数组需要做的不同事情 Typescript 支持对基于字符串 和 数组 做枚举
@@ -80,25 +80,25 @@ enum Direction {
   WEST,
 }
 // 转义
-var Direction
-;(function (Direction) {
-  Direction[(Direction['NORTH'] = 3)] = 'NORTH'
-  Direction[(Direction['SOUTH'] = 4)] = 'SOUTH'
-  Direction[(Direction['EAST'] = 5)] = 'EAST'
-  Direction[(Direction['WEST'] = 6)] = 'WEST'
-})(Direction || (Direction = {}))
+var Direction;
+(function (Direction) {
+  Direction[(Direction["NORTH"] = 3)] = "NORTH";
+  Direction[(Direction["SOUTH"] = 4)] = "SOUTH";
+  Direction[(Direction["EAST"] = 5)] = "EAST";
+  Direction[(Direction["WEST"] = 6)] = "WEST";
+})(Direction || (Direction = {}));
 
-let dir: Direction = Direction.NORTH
+let dir: Direction = Direction.NORTH;
 export enum EnumThemeLayoutMode {
-  'vertical' = '左侧菜单模式',
-  'horizontal' = '顶部菜单模式',
-  'vertical-mix' = '左侧菜单混合模式',
-  'horizontal-mix' = '顶部菜单混合模式',
+  "vertical" = "左侧菜单模式",
+  "horizontal" = "顶部菜单模式",
+  "vertical-mix" = "左侧菜单混合模式",
+  "horizontal-mix" = "顶部菜单混合模式",
 }
 
 export enum EnumThemeTabMode {
-  'chrome' = '谷歌风格',
-  'button' = '按钮风格',
+  "chrome" = "谷歌风格",
+  "button" = "按钮风格",
 }
 ```
 
@@ -109,9 +109,9 @@ export enum EnumThemeTabMode {
 ### 在 TypeScript 中，任何类型都可以被归为 any 类型。这让 any 类型成为了类型系统的顶级类型（也被称作全局超级类型）。
 
 ```ts
-let name: any = 666
-name = 'erkelost'
-name = false
+let name: any = 666;
+name = "erkelost";
+name = false;
 ```
 
 ## Unknown 类型
@@ -119,21 +119,21 @@ name = false
 ### 就像所有类型都可以赋值给 any，所有类型也都可以赋值给 unknown。这使得 unknown 成为 TypeScript 类型系统的另一种顶级类型（另一种是 any） unknown 类型只能被赋值给 any 类型和 unknown 类型本身。 只有能够保存任意类型值的容器才能保存 unknown 类型的值
 
 ```ts
-let name: unknown = 666
-name = 'erkelost'
-name = false
+let name: unknown = 666;
+name = "erkelost";
+name = false;
 //error
-let value3: boolean = name // Error Type 'unknown' is not assignable to type 'boolean'.
-let value4: number = name // Error Type 'unknown' is not assignable to type 'number'.
+let value3: boolean = name; // Error Type 'unknown' is not assignable to type 'boolean'.
+let value4: number = name; // Error Type 'unknown' is not assignable to type 'number'.
 ```
 
-## 元组 Tuple
+## 元组 Tuple类型
 
 ### 数组一般由同种类型的值组成，但有时我们需要在单个变量中存储不同类型的值，这时候我们就可以使用元组。在 JavaScript 中是没有元组的，元组是 TypeScript 中特有的类型
 
 ```ts
-let tupleType: [string, boolean]
-tupleType = ['erkelost', true]
+let tupleType: [string, boolean];
+tupleType = ["erkelost", true];
 ```
 
 ## Void 类型
@@ -143,7 +143,7 @@ tupleType = ['erkelost', true]
 ```ts
 // 声明函数返回值为void
 function warnUser(): void {
-  console.log('This is my warning message')
+  console.log("This is my warning message");
 }
 ```
 
@@ -152,33 +152,33 @@ function warnUser(): void {
 :::
 
 ```ts
-let unusable: void = undefined
+let unusable: void = undefined;
 ```
 
-### Null 和 Undefined
+## Null 和 Undefined 类型
 
 #### 在 ts 中 undefined 和 null 两者有各自的类型 也是 undefined 和 null
 
 ```ts
-let u: undefined = undefined
-let n: null = null
+let u: undefined = undefined;
+let n: null = null;
 ```
 
-## Never
+## Never 类型
 
 #### never 类型表示的是那些永不存在的值的类型。 例如，never 类型是那些总是会抛出异常或根本就不会有返回值的函数表达式或箭头函数表达式的返回值类型。在 TypeScript 中，可以利用 never 类型的特性来实现全面性检查，具体示例如下：
 
 ```ts
-type Foo = string | number
+type Foo = string | number;
 
 function controlFlowAnalysisWithNever(foo: Foo) {
-  if (typeof foo === 'string') {
+  if (typeof foo === "string") {
     // 这里 foo 被收窄为 string 类型
-  } else if (typeof foo === 'number') {
+  } else if (typeof foo === "number") {
     // 这里 foo 被收窄为 number 类型
   } else {
     // foo 在这里是 never
-    const check: never = foo
+    const check: never = foo;
   }
 }
 ```
@@ -193,15 +193,15 @@ function controlFlowAnalysisWithNever(foo: Foo) {
 :::
 
 ```ts
-let someValue: any = 'this is a string'
-let strLength: number = (someValue as string).length
+let someValue: any = "this is a string";
+let strLength: number = (someValue as string).length;
 ```
 
 ### 比如 我们现在使用通过 document.getElementById 来获取 id ts 只能知道我们现在需要返回 HTMLElement 但是他是不知道我们返回的具体类型
 
 ```ts
-const myEl = document.getElementById('adny') as HTMLImageElement
-myEl.src = 'PIC URL'
+const myEl = document.getElementById("adny") as HTMLImageElement;
+myEl.src = "PIC URL";
 // 这种就能让我们知道 现在的 myEl 是 图片元素
 ```
 
@@ -227,31 +227,31 @@ function processEntity(e?: Entity) {
 
 ```ts
 type Person = {
-  name: string
-  age?: number
+  name: string;
+  age?: number;
   friends?: {
-    name: string
-    age?: number
+    name: string;
+    age?: number;
     girlfriend?: {
-      name: string
-      age?: number
-    }
-  }
-}
+      name: string;
+      age?: number;
+    };
+  };
+};
 const info: Person = {
-  name: 'adny',
+  name: "adny",
   age: 18,
   friends: {
-    name: 'adny',
+    name: "adny",
     age: 18,
     girlfriend: {
-      name: 'adny',
+      name: "adny",
       age: 18,
     },
   },
-}
-console.log(info.friend?.name)
-console.log(info.friend?.age)
+};
+console.log(info.friend?.name);
+console.log(info.friend?.age);
 ```
 
 ## ?? 和 ！！ 的作用
@@ -260,15 +260,15 @@ console.log(info.friend?.age)
 
 ### ？？操作符 空值合并操作符 ？？ 是一个逻辑操作符 当操作符的左侧是 null 或者 undefined 的时候 返回右侧操作符 否则 则返回左侧操作符
 
-### 类型缩小 （类型守卫）
+## 类型缩小 （类型守卫）
 
 #### 类型保护是可执行运行时检查的一种表达式，用于确保该类型在一定的范围内。换句话说，类型保护可以保证一个字符串是一个字符串，尽管它的值也可以是一个数值。类型保护与特性检测并不是完全不同，其主要思想是尝试检测属性、方法或原型，以确定如何处理值。目前主要有四种的方式来实现类型保护：
 
 :::warning
 常见的类型保护有以下几种
 
-1. typeof
-2. instanceof
+1. typeOf
+2. instanceOf
 3. in
 4. 平等缩小 比如（ ===， ！== ）
    :::
@@ -277,11 +277,11 @@ console.log(info.friend?.age)
 
 ```ts
 function padLeft(value: string, padding: string | number) {
-  if (typeof padding === 'number') {
-    return '我是number类型'
+  if (typeof padding === "number") {
+    return "我是number类型";
   }
-  if (typeof padding === 'string') {
-    return '我是string类型'
+  if (typeof padding === "string") {
+    return "我是string类型";
   }
 }
 ```
@@ -291,37 +291,37 @@ function padLeft(value: string, padding: string | number) {
 ### javascript 中有一个运算符 用于确定对象是否具有带名称的属性 in 运算符 如果指定属性在指定得对象或其原型链中 则 in 返回 true
 
 ```ts
-type Fish = { swim: () => void }
-type Dog = { run: () => void }
+type Fish = { swim: () => void };
+type Dog = { run: () => void };
 function move(animal: Fish | Dog) {
-  if ('swim' in animal) {
-    animal.swim()
+  if ("swim" in animal) {
+    animal.swim();
   } else {
-    animal.run()
+    animal.run();
   }
 }
 ```
 
 ```ts
 interface Admin {
-  name: string
-  privileges: string[]
+  name: string;
+  privileges: string[];
 }
 
 interface Employee {
-  name: string
-  startDate: Date
+  name: string;
+  startDate: Date;
 }
 
-type UnknownEmployee = Employee | Admin
+type UnknownEmployee = Employee | Admin;
 
 function printEmployeeInformation(emp: UnknownEmployee) {
-  console.log('Name: ' + emp.name)
-  if ('privileges' in emp) {
-    console.log('Privileges: ' + emp.privileges)
+  console.log("Name: " + emp.name);
+  if ("privileges" in emp) {
+    console.log("Privileges: " + emp.privileges);
   }
-  if ('startDate' in emp) {
-    console.log('Start Date: ' + emp.startDate)
+  if ("startDate" in emp) {
+    console.log("Start Date: " + emp.startDate);
   }
 }
 ```
@@ -329,17 +329,17 @@ function printEmployeeInformation(emp: UnknownEmployee) {
 ### 平等类型缩小
 
 ```ts
-type Direction = 'left' | 'right' | 'center'
+type Direction = "left" | "right" | "center";
 function turDirection(direction: Direction) {
   switch (direction) {
-    case 'left':
-      return 'left'
-    case 'right':
-      return 'right'
-    case 'center':
-      return 'center'
+    case "left":
+      return "left";
+    case "right":
+      return "right";
+    case "center":
+      return "center";
     default:
-      return 'center'
+      return "center";
   }
 }
 ```
@@ -350,27 +350,27 @@ function turDirection(direction: Direction) {
 
 ```ts
 function printId(id: string | number) {
-  console.log('您的 id 是 ', id)
+  console.log("您的 id 是 ", id);
 }
-printId(10)
-printId('erkelost')
+printId(10);
+printId("erkelost");
 ```
 
 #### 如果我们在一个返回值中 想同时接收两种类型的值
 
 ```ts
 // 定义联合类型数组
-const arr: string[] = []
-const arr: (string | number)[] = []
+const arr: string[] = [];
+const arr: (string | number)[] = [];
 // 函数类型 联合类型通常与null 和 undefined 一起使用
 const sayHello = (name: string | undefined) => {
   /* ... */
-}
-sayHello('erkelost')
-sayHello(undefined)
+};
+sayHello("erkelost");
+sayHello(undefined);
 // 其他用法
-let num: 1 | 2 = 1
-type EventNames = 'click' | 'scroll' | 'mousemove'
+let num: 1 | 2 = 1;
+type EventNames = "click" | "scroll" | "mousemove";
 ```
 
 :::warning
@@ -382,14 +382,14 @@ type EventNames = 'click' | 'scroll' | 'mousemove'
 ```ts
 function printValue(date: Date | string) {
   if (date instanceof Date) {
-    console.log(date.toLocaleString())
+    console.log(date.toLocaleString());
   } else {
-    console.log('date is not a date')
+    console.log("date is not a date");
   }
 }
 ```
 
-### 可辨识联合类型 TypeScript 可辨识联合（Discriminated Unions）类型 包含三个要点 可辨识 联合类型 和 类型守卫
+## 可辨识联合类型 TypeScript 可辨识联合（Discriminated Unions）类型 包含三个要点 可辨识 联合类型 和 类型守卫
 
 ### 1. 可辨识
 
@@ -400,18 +400,18 @@ enum CarTransmission {
 }
 
 interface Motorcycle {
-  vType: 'motorcycle' // discriminant
-  make: number // year
+  vType: "motorcycle"; // discriminant
+  make: number; // year
 }
 
 interface Car {
-  vType: 'car' // discriminant
-  transmission: CarTransmission
+  vType: "car"; // discriminant
+  transmission: CarTransmission;
 }
 
 interface Truck {
-  vType: 'truck' // discriminant
-  capacity: number // in tons
+  vType: "truck"; // discriminant
+  capacity: number; // in tons
 }
 ```
 
@@ -424,7 +424,7 @@ interface Truck {
 ### 基于前面定义的三个接口 我们可以创建一个 Vehicle 联合类型
 
 ```ts
-type Vehicle = Motorcycle | Car | Truck
+type Vehicle = Motorcycle | Car | Truck;
 ```
 
 ### 3.类型守卫
@@ -432,12 +432,12 @@ type Vehicle = Motorcycle | Car | Truck
 ```ts
 function evaluatePrice(vehicle: Vehicle) {
   switch (vehicle.vType) {
-    case 'car':
-      return vehicle.transmission * EVALUATION_FACTOR
-    case 'truck':
-      return vehicle.capacity * EVALUATION_FACTOR
-    case 'motorcycle':
-      return vehicle.make * EVALUATION_FACTOR
+    case "car":
+      return vehicle.transmission * EVALUATION_FACTOR;
+    case "truck":
+      return vehicle.capacity * EVALUATION_FACTOR;
+    case "motorcycle":
+      return vehicle.make * EVALUATION_FACTOR;
   }
 }
 ```
@@ -447,9 +447,9 @@ function evaluatePrice(vehicle: Vehicle) {
 ### 类型别名用来给一个类型起一个新名字
 
 ```ts
-type message = string | number[]
+type message = string | number[];
 
-let adny = (message: message) => {}
+let adny = (message: message) => {};
 ```
 
 ## 交叉类型
@@ -457,28 +457,28 @@ let adny = (message: message) => {}
 ### 在 ts 中交叉类型是将多个类型合并成一种类型 通过 & 将现有的多种类型叠加到一起成为一种类型
 
 ```ts
-type name = { name: string }
-type erkelost = { age: number } & name
+type name = { name: string };
+type erkelost = { age: number } & name;
 let adny: erkelost = {
   age: 99,
-  name: 'erklost',
-}
+  name: "erklost",
+};
 ```
 
-### 可选类型补充
+## 可选类型补充
 
 #### 事实上 我们可以把可选类型当成是 类型 和 undefined 的 联合类型
 
 ```ts
 function print(message?: string) {
-  console.log(message)
+  console.log(message);
 }
 
-print()
-print('erkelost')
-print(undefined)
+print();
+print("erkelost");
+print(undefined);
 
-print(null)
+print(null);
 // argument of type 'null' is not assignable to parameter of type
 ```
 
@@ -488,16 +488,16 @@ print(null)
 
 ```ts
 type point = {
-  x: number
-  y: number
-}
+  x: number;
+  y: number;
+};
 function printPoint(point: Point) {
-  console.log(point.x, point.y)
+  console.log(point.x, point.y);
 }
-type ID = number | string
+type ID = number | string;
 
 function printId(id: ID) {
-  return id
+  return id;
 }
 ```
 
@@ -509,11 +509,11 @@ function printId(id: ID) {
 
 ```ts
 function greet(name: string) {
-  return 'Hello ' + name.toUpperCase()
+  return "Hello " + name.toUpperCase();
 }
-greet(123) // argument of type 'number' is not assignable to parameter of type 'string'
+greet(123); // argument of type 'number' is not assignable to parameter of type 'string'
 
-greet('erkelost', 'adny') // expected 1-2 arguments, but got 2
+greet("erkelost", "adny"); // expected 1-2 arguments, but got 2
 ```
 
 #### 我们也可以添加返回值的类型注解，这个注解出现在函数列表的后面
@@ -522,22 +522,22 @@ greet('erkelost', 'adny') // expected 1-2 arguments, but got 2
 
 ```ts
 function printCoordinate(point: { x: number; y: number }) {
-  console.log(point.x * point.y)
+  console.log(point.x * point.y);
 }
 interface pointInterface {
-  x: number
-  y: number
+  x: number;
+  y: number;
 }
 type pointType = {
-  x: number
-  y: number
-}
+  x: number;
+  y: number;
+};
 function printCoordinateT(point: pointType) {
-  console.log(point.x * point.y)
+  console.log(point.x * point.y);
 }
 
 function printCoordinateI(point: pointInterface) {
-  console.log(point.x * point.y)
+  console.log(point.x * point.y);
 }
 ```
 
@@ -546,7 +546,7 @@ function printCoordinateI(point: pointInterface) {
 ```ts
 function printCoordinate(point: { x: string; y: string; z?: number }) {
   if (point.z) {
-    console.log(x, y, z)
+    console.log(x, y, z);
   }
 }
 ```
@@ -603,8 +603,8 @@ function add(a: Combinable, b: Combinable) {
 
 ```ts
 interface Person {
-  readonly name: string
-  age?: number
+  readonly name: string;
+  age?: number;
 }
 ```
 
@@ -612,58 +612,62 @@ interface Person {
 
 ```ts
 interface Person {
-  name: string
-  age?: number
-  [propName: string]: any
+  name: string;
+  age?: number;
+  [propName: string]: any;
 }
 
-const p1 = { name: 'adny' }
-const p2 = { name: 'erkelost', age: 5 }
-const p3 = { name: 'obj', sex: 1 }
+const p1 = { name: "adny" };
+const p2 = { name: "erkelost", age: 5 };
+const p3 = { name: "obj", sex: 1 };
 ```
 
 ## this
 
-### 可推导的this类型
+### 可推导的 this 类型
 
-### this在不同情况下会绑定不同的值 所以 他的类型情况比较复杂 那么在ts中 如何处理this的呢
+### this 在不同情况下会绑定不同的值 所以 他的类型情况比较复杂 那么在 ts 中 如何处理 this 的呢
+
 ```ts
 const info = {
   name: 'erkelost',
-  say: fucntion() {
+  say: function() {
     console.log(this.name)
   }
 }
 info.say()  // 这里是确定的this指向  直接在对象中 我们 funciton this指向上一层的对象
 ```
 
-### 不确定的this类型
+### 不确定的 this 类型
 
-### 但是对于某些情况来说， 我们并不知道this指向的到底是什么
+### 但是对于某些情况来说， 我们并不知道 this 指向的到底是什么
+
 ```ts
 function sayHello() {
-  console.log(this.name)
+  console.log(this.name);
 }
 const info = {
-  name: 'erkelost',
-  sayHello
-}
+  name: "erkelost",
+  sayHello,
+};
 ```
+
 :::warning
-这里运行代码会报错 ts进行类型监测的目的是为了让我们的代码更加安全
-所以这里对于sayhello来说 我们虽然是在 info中放入了sayhello 但是我们并不知道this指向的是什么
-这个函数也可以去自己调用 这种代码是非常不安全的 或者通过别的对象去调用这个函数 这时候this的
+这里运行代码会报错 ts 进行类型监测的目的是为了让我们的代码更加安全
+所以这里对于 sayhello 来说 我们虽然是在 info 中放入了 sayhello 但是我们并不知道 this 指向的是什么
+这个函数也可以去自己调用 这种代码是非常不安全的 或者通过别的对象去调用这个函数 这时候 this 的
 指向就会发生变化
 :::
 
+### 指定 this 类型
 
-### 指定this类型
-### 这个时候 ts 通常会要求我们明确的指定this的类型
+### 这个时候 ts 通常会要求我们明确的指定 this 的类型
+
 ```ts
 type NameType = {
-  name: string
-}
+  name: string;
+};
 function sayHello(this: NameType) {
-  console.log(this.name)
+  console.log(this.name);
 }
 ```
