@@ -3,7 +3,7 @@ import Adny from '@/components/Icon.vue'
 </script>
 <!-- <Adny /> -->
 <p align='center'>
-<img src="https://raw.githubusercontent.com/unocss/unocss/main/playground/public/icon-gray.svg" />
+<img src="https://cn.vitejs.dev/logo.svg" />
 <!-- 快速地<sup><em>@erkelost/tempalte</em></sup> 创建 Web 应用 -->
 特定系统<sup><em>@erkelost/tempalte</em></sup> 规范
 <br> 

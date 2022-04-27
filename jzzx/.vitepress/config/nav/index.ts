@@ -33,7 +33,7 @@ export const nav = [
       },
       {
         text: 'Unocss-Playground',
-        link: 'https://unocss.antfu.me/'
+        link: 'https://uno.antfu.me/?s='
       },
       {
         text: 'Typescript-Playground',
