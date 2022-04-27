@@ -1,9 +1,11 @@
 <script setup>
 import Adny from '@/components/Icon.vue'
 </script>
-<Adny />
+<!-- <Adny /> -->
 <p align='center'>
-快速地<sup><em>@erkelost/tempalte</em></sup> 创建 Web 应用
+<img src="https://raw.githubusercontent.com/unocss/unocss/main/playground/public/icon-gray.svg" />
+<!-- 快速地<sup><em>@erkelost/tempalte</em></sup> 创建 Web 应用 -->
+特定系统<sup><em>@erkelost/tempalte</em></sup> 规范
 <br> 
 </p>
 
@@ -16,26 +18,34 @@ import Adny from '@/components/Icon.vue'
 <br>
 
 <p align='center'>
-<b>简体中文</b>
+<!-- <b>简体中文</b> -->
 </p>
 
 <br>
 
-## 特性
+## 所有技术栈
+
+- 🚀 [Pnpm](https://pnpm.js.org/) - 包管理工具
+
+- 🎨 [Echarts](https://echarts.apache.org/) - 图表库
 
 - ⚡️ [Vue 3](https://github.com/vuejs/vue-next), [Vite 2](https://github.com/vitejs/vite), [pnpm](https://pnpm.js.org/), [ESBuild](https://github.com/evanw/esbuild) - 就是快！
 
-- 🗂 [基于文件的路由]()
+<!-- - 🗂 [基于文件的路由]() -->
+
+- ✨ [Naive UI](https://www.naiveui.com/zh-CN/light) - Vue3 官方推荐组件库 主题化完整 组件丰富
 
 - 📦 [组件自动化加载]()
 
-- 🍍 [使用 Pinia 的状态管理](https://pinia.esm.dev/)
+- 🍍 [使用 Pinia 的状态管理](https://pinia.esm.dev/) - Vue3 官方库
 
-- 📑 [布局系统]()
+- 📑 [布局系统 @erkelost/layout]() 覆盖大部分布局系统
+
+- ✨ [路由系统 VueRouter](4.x) - Vue3 官方库
 
 - 🎨 [UnoCSS](https://github.com/unocss/unocss) - 高性能且极具灵活性的即时原子化 CSS 引擎
 
-- 😃 [各种图标集为你所用](https://github.com/antfu/unocss/tree/main/packages/preset-icons)
+- 😃 [Iconify 集成上万按需加载各种图标集为你所用](https://github.com/antfu/unocss/tree/main/packages/preset-icons) - 超级完整图标库
 
 - 🔥 使用 [新的 `<script setup>` 语法](https://github.com/vuejs/rfcs/pull/227)
 
@@ -43,20 +53,32 @@ import Adny from '@/components/Icon.vue'
 
 - 📥 [API 自动加载](https://github.com/antfu/unplugin-auto-import) - 直接使用 Composition API 无需引入
 
-- 🦾 TypeScript, 当然
+- 🦾 [TypeScript]() 开发时代码 静态分析 监测
 
-- ⚙️ 结合 [GitHub Actions](https://github.com/features/actions)，使用 [Vitest](https://github.com/vitest-dev/vitest) 进行单元测试, [Cypress](https://cypress.io/) 进行 E2E 测试
+- ❤️ [@VueUse/core]() Vue3 hook 库
 
-- ☁️ 零配置部署 Netlify
+- 🗓️ [@commitlint]() 代码提交规范
+
+- 📦 [Prettier & Eslint]() 代码规范检查
+
+- 📦 [husky]() 代码提交时 检查 pre 检查 post 检查
+
+- 🍔 [SASS1.5.1]() css 预处理器
+
+<!-- - ⚙️ 结合 [GitHub Actions](https://github.com/features/actions)，使用 [Vitest](https://github.com/vitest-dev/vitest) 进行单元测试, [Cypress](https://cypress.io/) 进行 E2E 测试 -->
+
+<!-- - ☁️ 零配置部署 Netlify -->
 
 <br>
 
-## 预配置
+<!-- ## 预配置
 
 ### UI 框架
 
-- [UnoCSS](https://github.com/antfu/unocss) - 高性能且极具灵活性的即时原子化 CSS 引擎 目前可能 回有一些 bug 会引发问题
-- [WindCss]() - 原子化 Tailwind Css 引擎 我们选这个
+- [UnoCSS](https://github.com/antfu/unocss) - 高性能且极具灵活性的即时原子化 CSS 引擎 (需要测试 和 Naive ui 合并引发的问题)
+
+
+- [NaiveUI]() - 主题化 完整 Vue3组件库
 
 ### Icons
 
@@ -90,17 +112,17 @@ import Adny from '@/components/Icon.vue'
   - [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) - Vue 3 `<script setup>` IDE 支持
   - [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify) - 图标内联显示和自动补全
   - [i18n Ally](https://marketplace.visualstudio.com/items?itemName=lokalise.i18n-ally) - 多合一的 I18n 支持
-  - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+  - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) -->
 
-## 现在可以试试!
+<!-- ## 现在可以试试!
 
 > Vitesse 需要 Node 版本 >=14
 
-### GitHub 模板
+### GitHub 模板 -->
 
-[使用这个模板创建仓库](https://github.com/ErKeLost/vite-vue3-template).
+<!-- [使用这个模板创建仓库](https://github.com/ErKeLost/vite-vue3-template). -->
 
-### 克隆到本地
+<!-- ### 克隆到本地
 
 如果您更喜欢使用更干净的 git 历史记录手动执行此操作
 
@@ -108,8 +130,8 @@ import Adny from '@/components/Icon.vue'
 pnpm add jzzx-cli -g
 pnpm i # 如果你没装过 pnpm, 可以先运行: npm install -g pnpm
 ```
-
-## 清单
+ -->
+<!-- ## 清单
 
 使用此模板时，请尝试按照清单正确更新您自己的信息
 
@@ -120,9 +142,9 @@ pnpm i # 如果你没装过 pnpm, 可以先运行: npm install -g pnpm
 - [ ] 移除 `.github` 文件夹中包含资助的信息
 - [ ] 整理 README 并删除路由
 
-紧接着, 享受吧 :)
+紧接着, 享受吧 :) -->
 
-## 使用
+<!-- ## 使用
 
 ### 开发
 
@@ -144,4 +166,36 @@ pnpm build
 
 ### 部署到 Netlify
 
-前往 [Netlify](https://app.netlify.com/start) 并选择你的仓库, 一路 `OK` 下去，稍等一下后，你的应用将被创建.
+前往 [Netlify](https://app.netlify.com/start) 并选择你的仓库, 一路 `OK` 下去，稍等一下后，你的应用将被创建. -->
+
+## 基于 Vite 所有插件问题（性能问题）（服务端渲染问题）（开发性能 生产性能问题）
+
+### Vite 插件 总览 （基于vite版本 2.9.5）
+
+- 🚀 [@vitejs/plugin-legacy](https://pnpm.js.org/) - 适配低版本浏览器 vite 版本 polyfill
+
+- ⚡️ [@vitejs/plugin-vue](https://github.com/vuejs/vue-next) - Vue 预设
+
+- 🚀 [@vitejs/plugin-vue-jsx](https://pnpm.js.org/) - Jsx预设
+
+- ⚡️ [vite-plugin-compression](https://github.com/vuejs/vue-next) - 打包编译预设 压缩
+
+- 🚀 [vite-plugin-eslint](https://pnpm.js.org/) - Vite 版本类型监测
+
+- ⚡️ [vite-plugin-glob](https://github.com/vuejs/vue-next) - Vite glob 扫描语法
+
+- ⚡️ [vite-plugin-inspect](https://github.com/vuejs/vue-next) - 模块 关联插件 开发检测 模块依赖问题
+
+- ⚡️ [vite-plugin-optimize-persist](https://github.com/vuejs/vue-next) - vite 开发预加载问题 提升预构建性能问题
+
+
+## 按需依赖
+
+
+- 😃 [unplugin-auto-import](https://github.com/antfu/unocss/tree/main/packages/preset-icons) - API 自动按需构建
+
+- 🔥 [unplugin-icons](https://github.com/vuejs/rfcs/pull/227) - SVG vue组件 图标库 按需构建
+
+- 🤙🏻 [unplugin-vue-components](https://vuejs.org/guide/extras/reactivity-transform.html) - Components 自动按需构建
+
+## 其他依赖
