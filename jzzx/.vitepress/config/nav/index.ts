@@ -24,12 +24,16 @@ export const nav = [
     text: 'Playground',
     items: [
       {
-        text: 'Vue-Playground',
+        text: 'Jzzx-Playground',
         link: 'https://jzzx-playground.netlify.app'
       },
       {
         text: 'VueUse-Playground',
         link: 'https://play.vueuse.org/'
+      },
+      {
+        text: 'Unocss-Playground',
+        link: 'https://unocss.antfu.me/'
       },
       {
         text: 'Typescript-Playground',
