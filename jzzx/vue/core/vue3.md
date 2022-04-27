@@ -41,7 +41,7 @@ import Adny from '@/components/Icon.vue'
 
 - 📑 [布局系统 @erkelost/layout]() 覆盖大部分布局系统
 
-- ✨ [路由系统 VueRouter](4.x) - Vue3 官方库
+- ✨ [路由系统 VueRouter]() - Vue3 官方库
 
 - 🎨 [UnoCSS](https://github.com/unocss/unocss) - 高性能且极具灵活性的即时原子化 CSS 引擎
 
