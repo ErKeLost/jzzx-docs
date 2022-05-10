@@ -10,30 +10,37 @@
 
 ```ts
 function identity(value) {
-  return value
+  return value;
 }
-console.log(identity(111)) // 111
+console.log(identity(111)); // 111
 ```
 
 ### 然后我们在继续支持 typescript 类型的参数
 
 ```ts
 function identity(value: number): number {
-  return value
+  return value;
 }
-console.log(identity(666))
+console.log(identity(666));
 ```
 
 ### 这里我们将 number 类型分配给参数和返回类型 使得该函数可用于原始类型 但是该函数不是通用的 我们希望定义不同的类型 但是还不能使用 any 因为 any 会使得编译器失去类型保护的作用 我们目的是让 函数适合任意的类型 我们可以使用泛型
 
 ```ts
 function identity<T>(value: T): T {
-  return value
+  return value;
 }
-console.log(identity<number>(1)) // 1
+console.log(identity<number>(1)); // 1
 ```
 
 ### 当我们调用函数的时候 number 类型 就像 参数 一样 会出现在 T 的任何位置进行填充 T 被称为类型变量 其中 T 代表 Type，在定义泛型时通常用作第一个类型变量名称。但实际上 T 可以用任何有效名称代替。除了 T 之外，以下是常见泛型变量代表的意思：
+
+:::warning
+T (type) 表示类型
+K (Key) 表示对象中的键的类型
+V (Value) 表示对象中值的类型
+E (Element) 表示元素类型
+:::
 
 ### 而且 我们并不是只能定义一个类型变量 我们 可以引用定义希望的任何数量的类型变量 比如我们引用了一个类型变量 u 用于扩展我们定义的函数
 
@@ -49,7 +56,7 @@ console.log(identity<Number, string>(68, "erkelost"));
 
 ```ts
 function identity<T, U>(value: T, message: U): [T, U] {
-  return [value, message]
+  return [value, message];
 }
 ```
 
@@ -66,16 +73,16 @@ interface Identities<V M> {
 
 ```ts
 function identity<T, U>(value: T, message: U): Identities<T, U> {
-  console.log(value + ': ' + typeof value)
-  console.log(message + ': ' + typeof message)
+  console.log(value + ": " + typeof value);
+  console.log(message + ": " + typeof message);
   let identities: Identities<T, U> = {
     value,
     message,
-  }
-  return identities
+  };
+  return identities;
 }
 
-console.log(identity(68, 'Semlinker'))
+console.log(identity(68, "Semlinker"));
 ```
 
 ### 泛型约束
@@ -87,8 +94,8 @@ console.log(identity(68, 'Semlinker'))
 ```ts
 function identity<T>(arg: T): T {
   // Property 'length' does not exist on type 'T'.(2339)
-  console.log(arg.length) // Error
-  return arg
+  console.log(arg.length); // Error
+  return arg;
 }
 ```
 
@@ -96,12 +103,12 @@ function identity<T>(arg: T): T {
 
 ```ts
 interface Length {
-  length: number
+  length: number;
 }
 
 function identity<T extends Length>(arg: T): T {
-  console.log(arg.length) // 可以获取length属性
-  return arg
+  console.log(arg.length); // 可以获取length属性
+  return arg;
 }
 ```
 
@@ -110,8 +117,8 @@ function identity<T extends Length>(arg: T): T {
 ```ts
 // 使用其他数组也可以调用length
 function identity<T>(arg: T[]): T[] {
-  console.log(arg.length)
-  return arg
+  console.log(arg.length);
+  return arg;
 }
 ```
 
@@ -124,17 +131,17 @@ function identity<T>(arg: T[]): T[] {
 ```ts
 // 接口继承接口
 interface Person {
-  name: string
-  age?: number
+  name: string;
+  age?: number;
 }
 interface obj extends Person {
-  sex: number
+  sex: number;
 }
 
 // 类型别名 继承
 
-type PartialPointX = { x: number }
-type Point = PartialPointX & { y: number }
+type PartialPointX = { x: number };
+type Point = PartialPointX & { y: number };
 ```
 
 ## Implements
@@ -143,22 +150,73 @@ type Point = PartialPointX & { y: number }
 
 ```ts
 interface Point {
-  x: number
-  y: number
+  x: number;
+  y: number;
 }
 
 class SomePoint implements Point {
-  x = 1
-  y = 2
+  x = 1;
+  y = 2;
 }
 
 type Point2 = {
-  x: number
-  y: number
-}
+  x: number;
+  y: number;
+};
 
 class SomePoint2 implements Point2 {
-  x = 1
-  y = 2
+  x = 1;
+  y = 2;
 }
+```
+
+## Ts 映射类型 工具链
+
+### 我们设定如果登录 需要 以下类型
+
+```ts
+type user {
+  username: string
+  password: string
+}
+```
+
+### 如果我们修改对象信息 只能修改密码 那么我们不需要 username 我们需要定义可选类型
+
+```ts
+type UserPartial {
+  username?: string
+  password?: string
+}
+```
+
+### 对于查看用户信息 所有都是只读属性
+
+```ts
+type ReadonlyType {
+  readonly username?: string
+  readonly password?: string
+}
+```
+
+### 这样代码就会有许多相同的 字段 我们这时候可以是用映射类型 他是一种泛型 Mapped Type 把原有的对象类型映射成为新的对象类型
+
+## 映射类型语法
+
+```ts
+{[P in K]: T}
+// in 类似js中的 for in 语句 用于遍历k类型中的所有类型
+// T 类型用于 表示ts中的任意类型
+// 在映射的过程中我们还可以使用 readonly 和 ？ 这两个额外的修饰符
+
+// 映射类型 示例
+type Item = { a: string; b: number; c: boolean }
+type T1 = { [P in "X" | "Y"]:number}
+// { x:number, y: number}
+type T2 = { [P in "x" | "y"]: p}
+// { x: 'x', y: 'y'}
+type T3 = { [P in "a" | "b"] : Item[p]}
+// { a: string, b: number}
+type T4 = { [P in keyof Item]: item[P]}
+// { a: string, b:number, c: boolean}
 ```
