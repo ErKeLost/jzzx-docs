@@ -1,4 +1,7 @@
 # 代码规范
+npm install pnpm -g
+npm install nrm -g
+
 ## 编码规范
 :::tip 统一团队的编码规范，有助于代码的维护。本章是传统意义上的 Style Guideline，目的是统一一些相对主观化的代码风格。
 :::

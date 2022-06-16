@@ -1,4 +1,4 @@
-import { h } from "vue";
+import { h } from 'vue'
 export const sidebar = {
   // '/guide/': [
   //   {
@@ -157,172 +157,222 @@ export const sidebar = {
   //     ]
   //   }
   // ],
-  "/vue": [
+  '/vue': [
     {
-      text: "@vue/reactivity",
-      items: [{ text: "实现 effect & reactive & 依赖收集 & 触发依赖", link: "/vue/source-code/reactivity/effect-reactive" }],
+      text: '@vue/reactivity',
+      items: [{ text: '实现 effect & reactive & 依赖收集 & 触发依赖', link: '/vue/source-code/reactivity/effect-reactive' }],
     },
   ],
-  "/typescript": [
+  '/typescript': [
     {
-      text: "基础知识",
-      items: [{ text: "TypeScript基础", link: "/typescript/learn/basics" }],
+      text: '基础知识',
+      items: [{ text: 'TypeScript基础', link: '/typescript/learn/basics' }],
     },
     {
-      text: "高级进阶",
+      text: '高级进阶',
       items: [
         {
-          text: "TypeScript高级进阶（项目BASE）",
-          link: "/typescript/learn/advanced",
+          text: 'TypeScript高级进阶（项目BASE）',
+          link: '/typescript/learn/advanced',
         },
       ],
     },
   ],
-  "/javascript": [
+  '/javascript': [
     {
-      text: "设计模式",
-      items: [{ text: "策略模式", link: "/javascript/design/strategy" }],
+      text: '设计模式',
+      items: [{ text: '策略模式', link: '/javascript/design/strategy' }],
     },
     {
-      text: "高级JavaScript",
+      text: '高级JavaScript',
       items: [
         {
-          text: "ES6 - ES12",
-          link: "/javascript/es6/index",
+          text: 'ES6 - ES12',
+          link: '/javascript/es6/index',
         },
-        { text: "This指向", link: "/javascript/this/index" },
-        { text: "手写call apply bind", link: "/javascript/call/index" },
-        { text: "防抖", link: "/javascript/debounce/index" },
-        { text: "节流", link: "/javascript/throttle/index" },
-        { text: "深拷贝", link: "/javascript/deepclone/index" },
+        { text: 'This指向', link: '/javascript/this/index' },
+        { text: '手写call apply bind', link: '/javascript/call/index' },
+        { text: '防抖', link: '/javascript/debounce/index' },
+        { text: '节流', link: '/javascript/throttle/index' },
+        { text: '深拷贝', link: '/javascript/deepclone/index' },
       ],
     },
   ],
-  "/log/": [
+  '/log/': [
     {
-      text: "目录",
+      text: '目录',
       items: [
-        { text: "文档", link: "/log/docs/index" },
-        { text: "JZZX-CLI", link: "/log/cli/index" },
+        { text: '文档', link: '/log/docs/index' },
+        { text: 'JZZX-CLI', link: '/log/cli/index' },
       ],
     },
   ],
-  "/vue/core": [
+  '/vue/core': [
     {
-      text: "@jzzx/cli模板下载",
+      text: '@jzzx/cli模板下载',
       items: [
-        { text: "Vue3 + Ts4.x + vite2.9", link: "/vue/core/vue3" },
+        { text: 'Vue3 + Ts4.x + vite2.9', link: '/vue/core/vue3' },
         {
-          text: "Vue3 + Ts4.x + vite2.9 - Mobile",
-          link: "/vue/core/vue3-mobile",
+          text: 'Vue3 + Ts4.x + vite2.9 - Mobile',
+          link: '/vue/core/vue3-mobile',
         },
       ],
     },
   ],
-  "/vue/vuex/": [
+  '/vue/vuex/': [
     {
-      text: "基础",
+      text: '基础',
       items: [
-        { text: "Vue2使用Vuex", link: "/vue/vuex/index" },
-        { text: "Vue3使用Vuex", link: "/vue/vuex/vue2" },
-        { text: "Vue2使用Pinia", link: "/vue/pinia/vue2" },
-        { text: "Vue3使用Pinia", link: "/vue/pinia/vue3" },
+        { text: 'Vue2使用Vuex', link: '/vue/vuex/index' },
+        { text: 'Vue3使用Vuex', link: '/vue/vuex/vue2' },
+        { text: 'Vue2使用Pinia', link: '/vue/pinia/vue2' },
+        { text: 'Vue3使用Pinia', link: '/vue/pinia/vue3' },
       ],
     },
   ],
-  "/cli/": [
+  '/cli/': [
     {
-      text: "基础",
+      text: '基础',
       items: [
-        { text: "安装", link: "/cli/install/index" },
-        { text: "快速开始", link: "/cli/quick-start/index" },
+        { text: '安装', link: '/cli/install/index' },
+        { text: '快速开始', link: '/cli/quick-start/index' },
       ],
     },
   ],
-  "/code-specification/": [
+  '/code-specification/': [
     {
-      text: "前端包管理器规范",
+      text: '特定项目代码规范',
+      items: [
+        {
+          text: `项目所有依赖网站 🚀🚀`,
+          link: '/code-specification/code-td-project/code-specification/deps',
+        },
+        {
+          text: `项目启动Ing.... ✨✨✨`,
+          link: '/code-specification/code-td-project/code-specification/index',
+        },
+        {
+          text: `代码结构规范 🔥🔥`,
+          link: '/code-specification/code-td-project/code-specification/code',
+        },
+        {
+          text: '类型代码 规范 😊😊',
+          link: '/code-specification/code-td-project/code-specification/type',
+        },
+      ],
+    },
+    {
+      text: '特定项目组件规范',
+      items: [
+        {
+          text: `PageTable 表格`,
+          link: '/code-specification/code-td-project/component-specification/table',
+        },
+        {
+          text: `PageSearch 表单`,
+          link: '/code-specification/code-td-project/component-specification/form',
+        },
+        {
+          text: 'PageDialog 对话框',
+          link: '/code-specification/code-td-project/component-specification/dialog',
+        },
+        {
+          text: 'Pagination 分页',
+          link: '/code-specification/code-td-project/component-specification/pagination',
+        },
+        {
+          text: 'Tabs 标签页',
+          link: '/code-specification/code-td-project/component-specification/tab',
+        },
+        {
+          text: 'Icon 多种图标组件',
+          link: '/code-specification/code-td-project/component-specification/icon',
+        }
+      ],
+    },
+    {
+      text: '前端包管理器规范',
       items: [
         {
           text: `pnpm`,
-          link: "/code-specification/package-specification/pnpm/index",
+          link: '/code-specification/package-specification/pnpm/index',
         },
         {
-          text: "nvm",
-          link: "/code-specification/package-specification/nvm/index",
+          text: 'nvm',
+          link: '/code-specification/package-specification/nvm/index',
         },
         {
-          text: "nrm",
-          link: "/code-specification/package-specification/nrm/index",
+          text: 'nrm',
+          link: '/code-specification/package-specification/nrm/index',
         },
       ],
     },
     {
-      text: "前端构建规范",
+      text: '前端构建规范',
       items: [
         {
-          text: "Esbuild",
-          link: "/code-specification/build-specification/esbuild/index",
+          text: 'Esbuild',
+          link: '/code-specification/build-specification/esbuild/index',
         },
         {
-          text: "Webpack5",
-          link: "/code-specification/build-specification/webpack/index",
+          text: 'Webpack5',
+          link: '/code-specification/build-specification/webpack/index',
         },
         {
-          text: "Vite",
-          link: "/code-specification/build-specification/vite/index",
+          text: 'Vite',
+          link: '/code-specification/build-specification/vite/index',
         },
         {
-          text: "Rollup",
-          link: "/code-specification/build-specification/rollup/index",
+          text: 'Rollup',
+          link: '/code-specification/build-specification/rollup/index',
         },
       ],
     },
     {
-      text: "前端代码检视插件规范",
+      text: '前端代码检视插件规范',
       items: [
         {
-          text: "Eslint，Prettier代码规范",
-          link: "/code-specification/check-specification/eslint/index",
+          text: 'Eslint，Prettier代码规范',
+          link: '/code-specification/check-specification/eslint/index',
         },
       ],
     },
     {
-      text: "前端项目结构规范",
+      text: '前端项目结构规范',
       items: [
         {
-          text: "项目提交代码规范",
-          link: "/code-specification/structure-specification/structure/index",
+          text: '项目提交代码规范',
+          link: '/code-specification/structure-specification/structure/index',
         },
       ],
     },
     {
-      text: "前端代码规范",
+      text: '前端代码规范',
       items: [
         {
-          text: "团队书写规范",
-          link: "/code-specification/structure-specification/code/index",
+          text: '团队书写规范',
+          link: '/code-specification/structure-specification/code/index',
         },
         {
-          text: "ES6 - ES12",
-          link: "/code-specification/write-specification/es6/index",
+          text: 'ES6 - ES12',
+          link: '/code-specification/write-specification/es6/index',
         },
         {
-          text: "JavaScript代码规范",
-          link: "/code-specification/write-specification/javascript/index",
+          text: 'JavaScript代码规范',
+          link: '/code-specification/write-specification/javascript/index',
         },
         {
-          text: "TypeScript代码规范",
-          link: "/code-specification/write-specification/typescript/index",
+          text: 'TypeScript代码规范',
+          link: '/code-specification/write-specification/typescript/index',
         },
       ],
     },
     {
-      text: "项目搭建规范",
+      text: '项目搭建规范',
       items: [
-        { text: `Vue2项目搭建`, link: "/guide/introduction" },
-        { text: "Vue3 + Ts 项目搭建", link: "/guide/introduction" },
+        { text: `Vue2项目搭建`, link: '/guide/introduction' },
+        { text: 'Vue3 + Ts 项目搭建', link: '/guide/introduction' },
       ],
     },
   ],
-};
+}
