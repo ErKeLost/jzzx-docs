@@ -3,6 +3,19 @@
 // import SponsorsGroup from './SponsorsGroup.vue';
 const depsList = [
   {
+    name: 'Pinia',
+    desc: '全局状态管理',
+    src: 'https://pinia.vuejs.org/logo.svg',
+    href: 'https://pinia.vuejs.org/introduction.html',
+  },
+  {
+    name: 'Icones',
+    desc: '推荐图标库 - 目前革新项目内置10万+ 图标',
+    src: 'https://raw.githubusercontent.com/antfu/icones/main/screenshots/1.png',
+    href: 'https://icones.netlify.app/collection/logos?s=',
+  },
+
+  {
     name: 'Vite',
     desc: '下一代的前端工具链',
     src: 'https://cn.vitejs.dev/logo.svg',
@@ -25,6 +38,12 @@ const depsList = [
     desc: '基本 Vue 组合实用程序的集合 - Vue Hook 库',
     src: 'https://play.vueuse.org/vueuse.svg',
     href: 'https://vueuse.org/functions.html',
+  },
+  {
+    name: 'IconFont',
+    desc: '公司ui图标',
+    src: 'https://img.alicdn.com/imgextra/i3/O1CN01Mn65HV1FfSEzR6DKv_!!6000000000514-55-tps-228-59.svg',
+    href: 'https://www.iconfont.cn/',
   },
 ]
 function changeUrl(item) {
@@ -72,6 +91,7 @@ section {
   margin-right: 20px;
   width: 100px;
   height: 80px;
+  object-fit: contain;
 }
 @media (max-width: 370px) {
   .tagline {
