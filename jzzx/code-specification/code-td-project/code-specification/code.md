@@ -2,6 +2,10 @@
 
 ## 文件夹结构以及规范
 
+:::tip
+非必要情况不允许在`main.ts`中添加业务功能逻辑代码
+:::
+
 ### 前置： 页面一一对应 不同页面对应不同功能 不同网络请求 比如
 
 :::warning
@@ -37,8 +41,13 @@ import { xxx } from '@/services/managementTerminal/companyUserManagement' // bad
 :::
 
 
-### 4.pinia 
+### 4. Pinia 
 
 :::warning
-如果需要编写pinia 代码 默认请使用setup模式 保证代码规范性 
+如果需要编写pinia 代码 默认请使用setup书写模式 保证代码规范性 
+:::
+
+### 5. Global
+:::warning
+如果需要添加全局组件 全局方法 请在 `@/plugins` 进行循环添加
 :::

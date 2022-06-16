@@ -256,7 +256,7 @@ export const sidebar = {
           link: '/code-specification/code-td-project/code-specification/code',
         },
         {
-          text: '类型代码 规范 😊😊',
+          text: '代码书写 规范 😊😊',
           link: '/code-specification/code-td-project/code-specification/type',
         },
       ],
