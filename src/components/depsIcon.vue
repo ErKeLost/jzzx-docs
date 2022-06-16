@@ -3,6 +3,12 @@
 // import SponsorsGroup from './SponsorsGroup.vue';
 const depsList = [
   {
+    name: 'Vite',
+    desc: '下一代的前端工具链',
+    src: 'https://cn.vitejs.dev/logo.svg',
+    href: 'https://cn.vitejs.dev/',
+  },
+  {
     name: 'Element-plus',
     desc: '基于 Vue 3，面向设计师和开发者的组件库',
     src: 'https://element-plus.org/images/element-plus-logo.svg',
