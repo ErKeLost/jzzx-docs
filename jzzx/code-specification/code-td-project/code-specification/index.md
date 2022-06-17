@@ -21,7 +21,7 @@ Vite 需要 Node.js 版本 >= 14.6.0。然而，有些模板需要依赖更高�
 
 ### nvm 安装
 
-[点击我查看如何使用 😃😃😃](https://jzzx-docs.netlify.app/code-specification/package-specification/nvm/index.html)
+[点击我查看如何使用 😃😃😃](/code-specification/package-specification/nvm/index.html)
 <br>
 
 [点击我直接下载 😊😊😊](https://github.com/coreybutler/nvm-windows/releases/download/1.1.9/nvm-setup.exe)

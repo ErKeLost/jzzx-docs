@@ -149,6 +149,6 @@ export const nav = [
   },
   {
     text: "项目架构规范",
-    link: "/code-specification/build-specification/rollup/index",
+    link: "/code-specification/code-td-project/code-specification/deps",
   },
 ];

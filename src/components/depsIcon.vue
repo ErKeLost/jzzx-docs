@@ -3,6 +3,12 @@
 // import SponsorsGroup from './SponsorsGroup.vue';
 const depsList = [
   {
+    name: 'Vue3',
+    desc: 'Vue3中文文档',
+    src: 'https://sfc.vuejs.org/logo.svg',
+    href: 'https://staging-cn.vuejs.org',
+  },
+  {
     name: 'Pinia',
     desc: '全局状态管理',
     src: 'https://pinia.vuejs.org/logo.svg',
