@@ -25,6 +25,8 @@ module.exports = (async () => {
 
     lang: "zh-CN",
     title: "Value Online",
+    lastUpdated: '最近更新',
+    repo: 'https://github.com/ErKeLost/jzzx-docs',
     description: "Value Online - The Value Online Front end architecture",
     head,
     themeConfig: {
