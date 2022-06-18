@@ -1,5 +1,8 @@
 /* :root {
   --vt-c-brand: #646cff;
-  --vt-c-brand-light: #747bff;
-  --vt-c-brand-dark: #444cd8;
+  --vt-c-brand-light: red;
+  --vt-c-brand-dark: blue;
+} */
+/* .vt-doc [class*='language-'] pre{
+  background-color: #fff;
 } */

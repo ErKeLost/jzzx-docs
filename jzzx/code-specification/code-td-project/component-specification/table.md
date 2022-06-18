@@ -6,7 +6,7 @@ title: PageTable的使用
 
 :::demo
 
-```vue
+```js
 <template>
   <el-row class="mb-4">
     <el-button>Default</el-button>
