@@ -26,9 +26,8 @@ nvm alias default [node版本号] // 设置默认版本
 ```
 ### 如果下载速度慢导致错误 可切换镜像
 ```js
-nvm node_mirror <registry url>
-nvm node_mirror https://registry/mirrors/node/
-nvm npm_mirror https://registry/mirrors/npm/
+node_mirror: https://npm.taobao.org/mirrors/node/
+npm_mirror: https://npm.taobao.org/mirrors/npm/
 ```
 
 ## Nvm for Mac
