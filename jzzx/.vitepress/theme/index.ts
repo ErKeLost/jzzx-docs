@@ -3,7 +3,8 @@ import { h } from 'vue'
 import Banner from '../../../src/components/Banner.vue'
 // uncomment to test CSS variables override
 import './override.css'
-
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
 export default {
   ...VPTheme,
   Layout() {
@@ -18,5 +19,8 @@ export default {
       // 'aside-mid': () => h('div', { style: { height: '300px' }}, 'Sponsors'),
       // 'aside-bottom': () => h('div', { style: { height: '300px' }}, 'Sponsors'),
     })
+  },
+  enhanceApp({app}) {
+    app.use(ElementPlus)
   }
 }
