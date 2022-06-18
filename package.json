@@ -44,7 +44,8 @@
     "element-plus": "^2.2.6",
     "gsap": "^3.9.1",
     "normalize.css": "^8.0.1",
-    "shiki": "^0.9.15"
+    "shiki": "^0.9.15",
+    "vitepress-for-component": "^0.17.1"
   },
   "devDependencies": {
     "@types/body-scroll-lock": "^2.6.1",
