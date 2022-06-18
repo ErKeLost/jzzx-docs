@@ -8,6 +8,7 @@ import "vitepress-theme-demoblock/theme/styles/index.css";
 // uncomment to test CSS variables override
 import "./override.css";
 import "element-plus/dist/index.css";
+import registerComponents from "./register-components";
 export default {
   ...VPTheme,
   Layout() {
@@ -27,5 +28,6 @@ export default {
     app.use(ElementPlus);
     app.component("Demo", Demo);
     app.component("DemoBlock", DemoBlock);
+    registerComponents(app);
   },
 };

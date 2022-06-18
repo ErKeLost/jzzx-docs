@@ -41,7 +41,7 @@
     "@vueuse/core": "^7.3.0",
     "body-scroll-lock": "^3.1.5",
     "dynamics.js": "^1.1.5",
-    "element-plus": "^2.2.6",
+    "element-plus": "2.1.8",
     "gsap": "^3.9.1",
     "normalize.css": "^8.0.1",
     "shiki": "^0.9.15"
