@@ -1,10 +1,13 @@
-import { VPTheme } from '@vue/theme'
-import { h } from 'vue'
-import Banner from '../../../src/components/Banner.vue'
+import { h } from "vue";
+import ElementPlus from "element-plus";
+import { VPTheme } from "@vue/theme";
+import Banner from "../../../src/components/Banner.vue";
+import Demo from "vitepress-theme-demoblock/components/Demo.vue";
+import DemoBlock from "vitepress-theme-demoblock/components/DemoBlock.vue";
+import "vitepress-theme-demoblock/theme/styles/index.css";
 // uncomment to test CSS variables override
-import './override.css'
-import ElementPlus from 'element-plus'
-import 'element-plus/dist/index.css'
+import "./override.css";
+import "element-plus/dist/index.css";
 export default {
   ...VPTheme,
   Layout() {
@@ -18,9 +21,11 @@ export default {
       // 'aside-top': () => h('div', 'this could be huge'),
       // 'aside-mid': () => h('div', { style: { height: '300px' }}, 'Sponsors'),
       // 'aside-bottom': () => h('div', { style: { height: '300px' }}, 'Sponsors'),
-    })
+    });
   },
-  enhanceApp({app}) {
-    app.use(ElementPlus)
-  }
-}
+  enhanceApp({ app }) {
+    app.use(ElementPlus);
+    app.component("Demo", Demo);
+    app.component("DemoBlock", DemoBlock);
+  },
+};

@@ -1,3 +1,4 @@
+const { demoBlockPlugin } = require("vitepress-theme-demoblock");
 const getBase = require("../../src/vitepress/config/baseConfig");
 const path = require("path");
 import { head } from "./config/head";
@@ -25,8 +26,8 @@ module.exports = (async () => {
 
     lang: "zh-CN",
     title: "Value Online",
-    lastUpdated: '最近更新',
-    repo: 'https://github.com/ErKeLost/jzzx-docs',
+    lastUpdated: "最近更新",
+    repo: "https://github.com/ErKeLost/jzzx-docs",
     description: "Value Online - The Value Online Front end architecture",
     head,
     themeConfig: {
@@ -61,6 +62,11 @@ module.exports = (async () => {
       ],
       nav,
       sidebar,
+    },
+    markdown: {
+      config: (md) => {
+        md.use(demoBlockPlugin);
+      },
     },
   };
 })();
