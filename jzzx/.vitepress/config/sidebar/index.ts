@@ -164,6 +164,7 @@ export const sidebar = {
         { text: '命令式和声明式', link: '/vue/source-code/art/order' },
         { text: '性能和可维护性的权衡', link: '/vue/source-code/art/pref' },
         { text: '虚拟dom性能到底如何', link: '/vue/source-code/art/vnode' },
+        { text: '编译时和运行时', link: '/vue/source-code/art/runtime' },
       ],
     },
     {
