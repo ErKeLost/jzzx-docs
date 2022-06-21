@@ -159,6 +159,14 @@ export const sidebar = {
   // ],
   '/vue': [
     {
+      text: '权衡的艺术',
+      items: [
+        { text: '命令式和声明式', link: '/vue/source-code/art/order' },
+        { text: '性能和可维护性的权衡', link: '/vue/source-code/art/pref' },
+        { text: '虚拟dom性能到底如何', link: '/vue/source-code/art/vnode' },
+      ],
+    },
+    {
       text: '@vue/reactivity',
       items: [{ text: '实现 effect & reactive & 依赖收集 & 触发依赖', link: '/vue/source-code/reactivity/effect-reactive' }],
     },
@@ -287,7 +295,7 @@ export const sidebar = {
         {
           text: 'Icon 多种图标组件',
           link: '/code-specification/code-td-project/component-specification/icon',
-        }
+        },
       ],
     },
     {
