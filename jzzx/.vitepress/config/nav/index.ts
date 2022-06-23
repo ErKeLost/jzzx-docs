@@ -9,6 +9,7 @@ export const nav = [
           { text: "安装", link: "" },
           { text: "更新日志", link: "/log/docs/index" },
           { text: "Vue3源码全解析", link: "/vue/source-code/index" },
+          { text: "VueUse源码全解析", link: "/vueuse/source-code/index" },
           { text: "从0到1学习Typescript", link: "/typescript/learn/basics" },
           { text: "高级JavaScript", link: "/javascript/this/index" },
         ],
@@ -23,6 +24,9 @@ export const nav = [
   {
     text: "Playground",
     items: [
+      {
+        text: "vueuse官网"
+      },
       {
         text: "Jzzx-Playground",
         link: "https://jzzx-playground.netlify.app",
