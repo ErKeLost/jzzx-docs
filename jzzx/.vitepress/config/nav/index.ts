@@ -26,6 +26,9 @@ export const nav = [
     text: "Playground",
     items: [
       {
+        text: "vueuse官网"
+      },
+      {
         text: "Jzzx-Playground",
         link: "https://jzzx-playground.netlify.app",
       },
