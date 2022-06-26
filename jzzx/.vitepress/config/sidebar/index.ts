@@ -163,6 +163,12 @@ export const sidebar = {
       items: [{ text: "UseTitle", link: "/vueuse/source-code/useTitle/useTitle" }],
     },
   ],
+  "/algorithm": [
+    {
+      text: "第一个算法",
+      items: [{ text: '第一个', link: "/algorithm"}]
+    }
+  ],
   "/vue": [
     {
       text: "权衡的艺术",

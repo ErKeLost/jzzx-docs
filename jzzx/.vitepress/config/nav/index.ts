@@ -10,7 +10,7 @@ export const nav = [
           { text: "更新日志", link: "/log/docs/index" },
           { text: "Vue3源码全解析", link: "/vue/source-code/index" },
           { text: "VueUse源码全解析", link: "/vueuse/source-code/index" },
-          // { text: "JavaScript算法解析", link: "/vue/source-code/index" },
+          { text: "JavaScript算法解析", link: "/algorithm/index" },
           { text: "从0到1学习Typescript", link: "/typescript/learn/basics" },
           { text: "高级JavaScript", link: "/javascript/this/index" },
         ],
