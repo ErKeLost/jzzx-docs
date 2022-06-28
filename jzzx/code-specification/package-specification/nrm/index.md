@@ -1,14 +1,17 @@
 # NRM
 
-> nrm(npm registry manager )是npm的镜像源管理工具，使用这个就可以快速地在 npm 源间切换
+
+> nrm(npm registry manager )是 npm 的镜像源管理工具，使用这个就可以快速地在 npm 源间切换
 
 - 安装
+
 ```js
 // 执行命令全局安装nrm
 npm install -g nrm
 ```
 
 - 使用
+
 ```js
 nrm ls // 查看可选的源
 nrm use taobao // 切换到taobao源
@@ -17,3 +20,7 @@ nrm add registry xxxx // 增加定制的源
 nrm del <registry> // 删除对应的源
 nrm test //测试相应源的响应时间
 ```
+<p>
+  <img style="border-radius: 10px" src="./CLI.png" />
+  <img style="color: #fff; width: 100px" src="./IcRoundPlus.svg" />
+</p>
