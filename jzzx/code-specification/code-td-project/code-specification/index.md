@@ -3,7 +3,6 @@
 ## 项目启动 🎨🎨🎨
 
 ```ts
-git clone ssh://git@git.valueonline.cn:9999/TRD/ssms.git
 ```
 
 :::warning
