@@ -21,7 +21,7 @@ nrm test //测试相应源的响应时间
 ```
 
 <p>
-  <img style="border-radius: 10px" src="./CLI.png" />
+  <img style="border-radius: 10px" src="./cli.png" />
   <img style="border-radius: 10px" src="./vite.png" />
   <img style="color: #fff; width: 100px" src="./IcRoundPlus.svg" />
 </p>
